@@ -13,10 +13,13 @@ public class GameManager : MonoBehaviour
             Debug.Log("All goals reached! You win!");
         }
     }
-    public void giveGoalScore()
+    public void GiveGoalScore()
     {
         score+= (int)(lastScoreTime-Time.time + 1000);
     }
-
+    public void GiveScore(int _score)
+    {
+        score += _score;
+    }
 
 }

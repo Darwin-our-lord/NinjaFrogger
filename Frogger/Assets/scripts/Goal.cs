@@ -10,7 +10,7 @@ public class Goal : MonoBehaviour
         {
             gameManager.isGoalReached[goalIndex] = true;
             gameManager.CheckForWin();
-            gameManager.giveGoalScore();
+            gameManager.GiveGoalScore();
             collision.otherCollider.transform.position = new Vector3(0, 0, 0);
             Debug.Log("Goal reached!");
         }
