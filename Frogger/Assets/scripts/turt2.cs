@@ -1,45 +1,44 @@
 using UnityEngine;
 
-public class turt : MonoBehaviour
+public class turt2 : MonoBehaviour
 {
     float bilx = 0;
     bool turt_disapear = false;
     public float wait = 3;
     float time = 0;
     bool tr = true;
-    public static int turt_usymndlig = 0;
+    public static int turt2_usymndlig = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
         bilx = transform.position.x;
-        switch (turt_usymndlig)
+        switch(turt2_usymndlig)
         {
             case 0:
                 {
-                turt_usymndlig++;
-                break;
+                    turt2_usymndlig++;
+                    break;
                 }
             case 1:
-                turt_usymndlig++;
+                turt2_usymndlig++;
                 break;
             case 2:
-                turt_usymndlig++;
-                Destroy(gameObject);
+                turt2_usymndlig++;
                 break;
             case 3:
-                turt_usymndlig = 0;
-                turt_disapear = true;
+                turt2_usymndlig++;
                 break;
             case 4:
-                turt_usymndlig++;
+                turt2_usymndlig++;
                 break;
             case 5:
-                turt_usymndlig++;
+                turt2_usymndlig=0;
+                turt_disapear=true;
                 break;
-
         }
+        
     }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -59,9 +58,8 @@ public class turt : MonoBehaviour
                 sr.color = color;
 
             }
-            else if (tr == true)
-            {
-
+            else if (tr == true){
+                
                 SpriteRenderer sr = GetComponent<SpriteRenderer>();
                 Debug.Log("ikke forsvinde");
                 Color color = sr.color;
@@ -73,7 +71,7 @@ public class turt : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else { bilx = bilx -bil1.carspeed / 4; }
+        else { bilx = bilx - bil1.carspeed / 4; }
         transform.position = new Vector3(bilx, transform.position.y, transform.position.z);
     }
 }

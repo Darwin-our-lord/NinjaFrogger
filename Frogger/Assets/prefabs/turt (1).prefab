@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1693900439210478141}
   - component: {fileID: 1181668958048484991}
-  - component: {fileID: 1011005258802440498}
+  - component: {fileID: 7598165216059983068}
   m_Layer: 0
   m_Name: turt (1)
   m_TagString: Untagged
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1011005258802440498
+--- !u!114 &7598165216059983068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7538616833380888819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a99957a8bd9a614684065eefc9a1848, type: 3}
+  m_Script: {fileID: 11500000, guid: bb6baabcda326a744b8e28eafb3b9b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wait: 3
