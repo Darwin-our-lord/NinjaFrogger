@@ -3,6 +3,8 @@ using UnityEngine;
 public class turt : MonoBehaviour
 {
     float bilx = 0;
+
+    [SerializeField] float carspeed = 0.1f;
     bool turt_disapear = false;
     public float wait = 3;
     float time = 0;
@@ -69,11 +71,13 @@ public class turt : MonoBehaviour
                 sr.color = color;
             }
         }
-        if (transform.position.x <= -10)
+        if (transform.position.x >= 10)
         {
             Destroy(gameObject);
         }
-        else { bilx = bilx -bil1.carspeed / 4; }
-        transform.position = new Vector3(bilx, transform.position.y, transform.position.z);
+        else
+        {
+            transform.position = new Vector3(transform.position.x + carspeed / 2, transform.position.y, transform.position.z);
+        }
     }
 }
