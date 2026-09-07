@@ -97,6 +97,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6862378392294286938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0ae4ccf8e0e2864d907ab5a96833f88, type: 3}
+  m_Script: {fileID: 11500000, guid: 03d3715a95d1ac6448088c34c427807b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carspeed: 0.1
