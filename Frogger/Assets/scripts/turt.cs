@@ -3,13 +3,12 @@ using UnityEngine;
 public class turt : MonoBehaviour
 {
     float bilx = 0;
-
+    public float turt_usymndlig = 0f;
     [SerializeField] float carspeed = 0.1f;
     bool turt_disapear = false;
     public float wait = 3;
     float time = 0;
     bool tr = true;
-    public static int turt_usymndlig = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -71,13 +70,13 @@ public class turt : MonoBehaviour
                 sr.color = color;
             }
         }
-        if (transform.position.x >= 10)
+        if (transform.position.x <= -10)
         {
             Destroy(gameObject);
         }
         else
         {
-            transform.position = new Vector3(transform.position.x + carspeed / 2, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + -carspeed / 2, transform.position.y, transform.position.z);
         }
     }
 }
