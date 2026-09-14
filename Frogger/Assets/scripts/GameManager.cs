@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     {
         if(isGoalReached[0] && isGoalReached[1] && isGoalReached[2] && isGoalReached[3] && isGoalReached[4])
         {
-            Debug.Log("All goals reached! You win!");
+            Application.LoadLevel(Application.loadedLevel);
+            Debug.Log($"{score}");
         }
     }
     public void GiveGoalScore()

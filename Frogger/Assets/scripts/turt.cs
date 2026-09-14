@@ -29,7 +29,7 @@ public class turt : MonoBehaviour
                 Destroy(gameObject);
                 break;
             case 3:
-                turt_usymndlig = 0;
+                turt_usymndlig++;
                 turt_disapear = true;
                 break;
             case 4:

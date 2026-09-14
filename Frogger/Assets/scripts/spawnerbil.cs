@@ -29,7 +29,6 @@ public class spawnerbil : MonoBehaviour
         time += Time.deltaTime;
         if (time > wait)
         {
-            Debug.Log($"you wait {wait}");
             time = 0;
             SpawnZombie();
         }
