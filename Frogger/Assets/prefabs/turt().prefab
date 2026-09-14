@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 834557679951625302}
   - component: {fileID: 6003159073570500988}
   m_Layer: 0
-  m_Name: turt
+  m_Name: turt()
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,3 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a99957a8bd9a614684065eefc9a1848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carspeed: 0.1
+  wait: 3
+  turt_usymndlig: 0
