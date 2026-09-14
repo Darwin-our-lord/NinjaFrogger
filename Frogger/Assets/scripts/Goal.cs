@@ -5,7 +5,7 @@ public class Goal : MonoBehaviour
     [SerializeField] GameManager gameManager;
     [SerializeField] int goalIndex;
 
-    bool activeExit;
+    [SerializeField] bool activeExit;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
