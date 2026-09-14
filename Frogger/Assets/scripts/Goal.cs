@@ -9,6 +9,7 @@ public class Goal : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Collision detected with: " + collision.gameObject.name);
         if (!activeExit) return;
         if (collision.gameObject.CompareTag("Player"))
         {
