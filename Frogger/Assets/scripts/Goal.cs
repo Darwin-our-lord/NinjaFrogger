@@ -16,7 +16,7 @@ public class Goal : MonoBehaviour
             gameManager.isGoalReached[goalIndex] = true;
             gameManager.CheckForWin();
             gameManager.GiveGoalScore();
-            collision.transform.position = new Vector3(0, 0, 0);
+            collision.transform.position = new Vector3(2, -4, 0);
             activeExit = false;
             this.GetComponent<SpriteRenderer>().color = Color.hotPink;
             Debug.Log("Goal reached!");
