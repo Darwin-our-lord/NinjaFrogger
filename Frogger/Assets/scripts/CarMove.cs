@@ -16,4 +16,11 @@ public class CarMove : MonoBehaviour
             transform.position = new Vector3(transform.position.x + carspeed / 2, transform.position.y, transform.position.z);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerController>().Die();
+        }
+    }
 }
