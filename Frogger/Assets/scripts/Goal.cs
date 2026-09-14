@@ -7,7 +7,7 @@ public class Goal : MonoBehaviour
 
     [SerializeField] bool activeExit;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Collision detected with: " + collision.gameObject.name);
         if (!activeExit) return;
@@ -16,7 +16,7 @@ public class Goal : MonoBehaviour
             gameManager.isGoalReached[goalIndex] = true;
             gameManager.CheckForWin();
             gameManager.GiveGoalScore();
-            collision.otherCollider.transform.position = new Vector3(0, 0, 0);
+            collision.transform.position = new Vector3(0, 0, 0);
             activeExit = false;
             this.GetComponent<SpriteRenderer>().color = Color.hotPink;
             Debug.Log("Goal reached!");
