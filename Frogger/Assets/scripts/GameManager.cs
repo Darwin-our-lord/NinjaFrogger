@@ -4,7 +4,7 @@ public class GameManager : MonoBehaviour
 {
 
     public bool[] isGoalReached = new bool[5];
-    int score = 0;
+    static int score = 0;
     float lastScoreTime = 0; //last time a score was counted
     public void CheckForWin()
     {
