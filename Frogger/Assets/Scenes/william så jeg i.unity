@@ -1129,7 +1129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   signReceiver: {fileID: 158461290}
   gridSize: 1
-  moveCooldown: 0.3
+  moveCooldown: 0.1
 --- !u!1 &811415914
 GameObject:
   m_ObjectHideFlags: 0
