@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class killfrogwater : MonoBehaviour
 {
+    public PlayerController controller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,7 +15,12 @@ public class killfrogwater : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
-                Destroy(collision.gameObject);
+                if (collision.transform.parent == null)
+                {controller.Die(); }else
+                {
+                    
+
+                }
             }
         }
     }
