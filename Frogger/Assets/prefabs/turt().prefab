@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 834557679951625302}
   - component: {fileID: 6003159073570500988}
   - component: {fileID: -1317072098414330664}
+  - component: {fileID: -8098334763123864539}
   m_Layer: 0
   m_Name: turt()
   m_TagString: Untagged
@@ -101,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a99957a8bd9a614684065eefc9a1848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turt_usymndlig: 1
+  turt_usymndlig: 3
   carspeed: 0.1
   wait: 3
 --- !u!61 &-1317072098414330664
@@ -134,7 +135,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -150,3 +151,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-8098334763123864539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911151460135569139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ce04a6363570341ad0a9db554e688e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

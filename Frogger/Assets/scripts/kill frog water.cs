@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class killfrogwater : MonoBehaviour
@@ -9,25 +10,21 @@ public class killfrogwater : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
+        StartCoroutine(killDelay(collision));
+    }
+
+    IEnumerator killDelay(Collider2D collision)
+    {
+        yield return new WaitForSeconds(0.1f);
         if (collision != null)
         {
             if (collision.CompareTag("Player"))
             {
                 if (collision.transform.parent == null)
-                {controller.Die(); }else
-                {
-                    
-
-                }
+                { controller.Die(); }
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

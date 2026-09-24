@@ -51,6 +51,8 @@ public class turt : MonoBehaviour
             {
                 tr = !tr;
                 Debug.Log("forsvinder");
+                GetComponent<BoxCollider2D>().enabled = false;
+
                 time = 0;
                 // chat
                 SpriteRenderer sr = GetComponent<SpriteRenderer>();
@@ -62,6 +64,7 @@ public class turt : MonoBehaviour
             }
             else if (tr == true)
             {
+                GetComponent<BoxCollider2D>().enabled = true;
 
                 SpriteRenderer sr = GetComponent<SpriteRenderer>();
                 Debug.Log("ikke forsvinde");

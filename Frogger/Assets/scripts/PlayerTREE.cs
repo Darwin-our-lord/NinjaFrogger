@@ -7,13 +7,13 @@ public class PlayerTREE : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        transform.SetParent(collision.transform);
+        collision.transform.SetParent(transform);
     }
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        transform.SetParent(null);
+        collision.transform.SetParent(null); 
     }
     // Update is called once per frame
     void Update()
