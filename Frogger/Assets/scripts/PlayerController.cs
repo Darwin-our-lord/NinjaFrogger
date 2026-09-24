@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] int playerHealth = 3;
+    [SerializeField] GameObject deathUI;
     public void Die()
     {
         Debug.Log("Player dead");
@@ -10,7 +11,8 @@ public class PlayerController : MonoBehaviour
         if (playerHealth <= 0)
         {
             Debug.Log("Game Over");
-            // Implement game over logic here
+            deathUI.SetActive(true);
+            Time.timeScale = 0f;
         }
         gameObject.transform.position = new Vector3(2, -4, 0);
 

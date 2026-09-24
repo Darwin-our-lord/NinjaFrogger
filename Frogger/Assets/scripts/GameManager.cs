@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,6 +30,12 @@ public class GameManager : MonoBehaviour
     private void UpdateScoreText()
     {
         ScoreText.GetComponent<TMP_Text>().text = "SCORE: " + score;
+    }
+
+    public void RestartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
 
 }
