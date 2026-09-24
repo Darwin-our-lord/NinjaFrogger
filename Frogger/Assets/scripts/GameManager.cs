@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
 
     public bool[] isGoalReached = new bool[5];
+    [SerializeField] GameObject ScoreText;
     static int score = 0;
     float lastScoreTime = 0; //last time a score was counted
     public void CheckForWin()
@@ -21,6 +23,10 @@ public class GameManager : MonoBehaviour
     public void GiveScore(int _score)
     {
         score += _score;
+    }
+    private void UpdateScoreText()
+    {
+        ScoreText.GetComponent<TMP_Text>().text = "SCORE: " + score;
     }
 
 }
