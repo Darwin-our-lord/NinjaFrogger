@@ -19,10 +19,12 @@ public class GameManager : MonoBehaviour
     public void GiveGoalScore()
     {
         score+= (int)(lastScoreTime-Time.time + 1000);
+        UpdateScoreText();
     }
     public void GiveScore(int _score)
     {
         score += _score;
+        UpdateScoreText();
     }
     private void UpdateScoreText()
     {
