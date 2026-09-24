@@ -41,10 +41,10 @@ public class FroggerController : MonoBehaviour
     {
         switch (sign)
         {
-            case "tiger":    return Vector3.forward;
+            case "rat":    return Vector3.forward;
             case "boar":  return Vector3.back;
             case "ox":     return Vector3.left;
-            case "rat":    return Vector3.right;
+            case "tiger":    return Vector3.right;
             default:       return Vector3.zero;
         }
     }

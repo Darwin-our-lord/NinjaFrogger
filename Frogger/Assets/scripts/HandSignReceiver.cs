@@ -1,9 +1,3 @@
-// HandSignReceiver.cs - WITH DEBUG OUTPUT
-//
-// Listens for UDP packets from python_bridge/predict_server.py on
-// 127.0.0.1:5065 and exposes the latest detected hand sign to the rest of
-// your Unity game.
-
 using System;
 using System.Collections.Concurrent;
 using System.Net;
