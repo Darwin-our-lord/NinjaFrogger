@@ -15,7 +15,7 @@ public class spawnerbil : MonoBehaviour
     {
         turt_usyg++;
         if (turt_usyg >= 5) { turt_usyg = 0; }
-        wait = 5;
+        wait = 12;
         move = Random.Range(0, 3);
         wait = wait + move;
         Instantiate(zombiePrefab, spawnPoint.position, spawnPoint.rotation);
