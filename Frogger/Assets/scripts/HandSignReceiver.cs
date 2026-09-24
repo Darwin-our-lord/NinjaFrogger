@@ -7,7 +7,6 @@ using UnityEngine;
 
 public class HandSignReceiver : MonoBehaviour
 {
-    [Tooltip("Must match UNITY_PORT in predict_server.py")]
     public int listenPort = 5065;
 
     public string CurrentSign { get; private set; } = "";
@@ -96,7 +95,6 @@ public class HandSignReceiver : MonoBehaviour
 
     private void OnGUI()
     {
-        // Draw debug info on screen
         GUILayout.BeginArea(new Rect(10, 10, 300, 100));
         GUILayout.Label($"Port: {listenPort}");
         GUILayout.Label($"Packets received: {_packetCount}");

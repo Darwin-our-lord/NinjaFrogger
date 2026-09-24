@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CarMove : MonoBehaviour
 {
-    [SerializeField] float carspeed = 0.1f;
+    [SerializeField] float carspeed = 0.04f;
 
     // Update is called once per frame
     void FixedUpdate()
