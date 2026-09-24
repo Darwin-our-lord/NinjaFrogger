@@ -1,9 +1,12 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
 
     public bool[] isGoalReached = new bool[5];
+    [SerializeField] GameObject ScoreText;
     static int score = 0;
     float lastScoreTime = 0; //last time a score was counted
     public void CheckForWin()
@@ -17,10 +20,22 @@ public class GameManager : MonoBehaviour
     public void GiveGoalScore()
     {
         score+= (int)(lastScoreTime-Time.time + 1000);
+        UpdateScoreText();
     }
     public void GiveScore(int _score)
     {
         score += _score;
+        UpdateScoreText();
+    }
+    private void UpdateScoreText()
+    {
+        ScoreText.GetComponent<TMP_Text>().text = "SCORE: " + score;
+    }
+
+    public void RestartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
 
 }
